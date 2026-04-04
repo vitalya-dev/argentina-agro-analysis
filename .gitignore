@@ -1,0 +1,20 @@
+# 1. Готовые сборки (генерируются автоматически через make)
+build/
+
+# 2. Зависимости Node.js (раз уж у тебя есть package.json)
+node_modules/
+
+# 3. Временные файлы LibreOffice
+.~lock.*#
+
+# 4. Временные файлы Microsoft Office
+~$*.docx
+~$*.pptx
+
+# 5. Системный мусор
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 6. Временные логи сборки
+*.log
