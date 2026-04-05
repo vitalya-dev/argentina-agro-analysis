@@ -3,6 +3,7 @@ tableCaptionLocation: bottom
 table-caption-position: below
 figureTitle: Рисунок
 tableTitle: Таблица
+toc-title: Содержание
 ---
 
 # ВВЕДЕНИЕ
@@ -152,31 +153,31 @@ Table: Параметры производства и экспорта осно�
 
 # СПИСОК ИСПОЛЬЗОВАННОЙ ЛИТЕРАТУРЫ
 
-1. Agricultural Policy Monitoring and Evaluation 2025: Argentina // OECD (Организация экономического сотрудничества и развития). — 2025.
-2. Basic statistics of Argentina, 2024: OECD Economic Surveys: Argentina 2025 // OECD. — 2025.
-3. Grain and Feed Update (Обзор рынка зерна и кормов) // USDA Foreign Agricultural Service. — 2025.
-4. Livestock and Products Semi-annual (Обзор рынка животноводства и мясопродуктов) // USDA Foreign Agricultural Service. — 2024.
-5. Citrus Annual (Годовой отчет по цитрусовым) // USDA Foreign Agricultural Service. — 2025.
-6. Biofuels Annual (Годовой отчет по биотопливу) // USDA Foreign Agricultural Service. — 2025.
-7. Biotechnology and Other New Production Technologies Annual (Отчет по биотехнологиям) // USDA Foreign Agricultural Service. — 2025.
-8. Argentina (ARG) Exports, Imports, and Trade Partners (Структура экспорта и импорта Аргентины) // The Observatory of Economic Complexity (OEC).
-9. The economic context of Argentina (Экономический контекст Аргентины) // International Trade Portal / Lloyds Bank.
-10. To unlock growth, Argentina should reduce its export taxes (Аналитика экспортных пошлин Аргентины) // Atlantic Council. — 2026.
-11. Agriculture Market in Argentina - Size, Share & Industry Analysis 2025-2031 (Анализ сельскохозяйственного рынка Аргентины) // Mordor Intelligence.
-12. Argentina Agritech Market Size, Share & Forecast 2026-2034 (Рынок агротехнологий Аргентины) // IMARC Group.
-13. Argentina food processing equipment market report 2034 (Рынок оборудования для пищевой промышленности) // IMARC Group.
-14. Agriculture Argentina 2025: Key Trends & Innovations (Ключевые тренды и инновации в АПК) // Farmonaut.
-15. Farming In Argentina: Top AgTech Innovations 2026 (Топ инноваций AgTech в Аргентине) // Farmonaut.
-16. Livestock monitor | 2024 campaign (Мониторинг животноводства) // Universidad Nacional de Rosario (UNR).
-17. Accounting for pastoralists in Argentina (Учет пастбищного животноводства в Аргентине) // League for Pastoral Peoples.
-18. Argentina's agro-export growth: A strong 2024 and promising 2025 outlook (Обзор агроэкспорта) // Miller Magazine.
-19. Argentina recorded record trade surplus in 2024 (Статья о рекордном профиците торгового баланса) // Buenos Aires Times.
-20. Argentina trims export duties for agricultural products (О снижении экспортных пошлин на агропродукцию) // Buenos Aires Times.
-21. Argentina's beef export revenue reaches record in 2025 (Рекордные доходы от экспорта говядины) // The Western Producer.
-22. Argentina Closed 2025 With 31.5% Inflation; and more news about Latin American agribusiness (Макроэкономические итоги 2025 года) // Agribrasilis.
-23. Argentine Dairy Industry in Figures: Key Data for 2024 (Молочная промышленность Аргентины в цифрах) // DairyNews.
-24. El mapa de la industria frigorífica 2025 (Карта мясоперерабатывающей индустрии, концентрация отрасли) // Bichos de Campo.
-25. How Milei's policies and global trends are reshaping Argentina's citrus export landscape (Экспорт цитрусовых и новые политики) // FreshFruitPortal / FreshPlaza.
-26. Argentina's Wine Exports Fall to $661 Million in 2025, Lowest Value Since 2009 (Кризис винного экспорта) // Vinetur.
-27. Argentina's wine industry withers on the vine as consumption hits a record low (Падение внутреннего потребления вина) // Barchart.
-28. Argentine 2025 Biodiesel Production among Lowest on Record (Снижение производства биодизеля) // Advanced BioFuels USA.
+#. Agricultural Policy Monitoring and Evaluation 2025: Argentina // OECD (Организация экономического сотрудничества и развития). — 2025.
+#. Basic statistics of Argentina, 2024: OECD Economic Surveys: Argentina 2025 // OECD. — 2025.
+#. Grain and Feed Update (Обзор рынка зерна и кормов) // USDA Foreign Agricultural Service. — 2025.
+#. Livestock and Products Semi-annual (Обзор рынка животноводства и мясопродуктов) // USDA Foreign Agricultural Service. — 2024.
+#. Citrus Annual (Годовой отчет по цитрусовым) // USDA Foreign Agricultural Service. — 2025.
+#. Biofuels Annual (Годовой отчет по биотопливу) // USDA Foreign Agricultural Service. — 2025.
+#. Biotechnology and Other New Production Technologies Annual (Отчет по биотехнологиям) // USDA Foreign Agricultural Service. — 2025.
+#. Argentina (ARG) Exports, Imports, and Trade Partners (Структура экспорта и импорта Аргентины) // The Observatory of Economic Complexity (OEC).
+#. The economic context of Argentina (Экономический контекст Аргентины) // International Trade Portal / Lloyds Bank.
+#. To unlock growth, Argentina should reduce its export taxes (Аналитика экспортных пошлин Аргентины) // Atlantic Council. — 2026.
+#. Agriculture Market in Argentina - Size, Share & Industry Analysis 2025-2031 (Анализ сельскохозяйственного рынка Аргентины) // Mordor Intelligence.
+#. Argentina Agritech Market Size, Share & Forecast 2026-2034 (Рынок агротехнологий Аргентины) // IMARC Group.
+#. Argentina food processing equipment market report 2034 (Рынок оборудования для пищевой промышленности) // IMARC Group.
+#. Agriculture Argentina 2025: Key Trends & Innovations (Ключевые тренды и инновации в АПК) // Farmonaut.
+#. Farming In Argentina: Top AgTech Innovations 2026 (Топ инноваций AgTech в Аргентине) // Farmonaut.
+#. Livestock monitor | 2024 campaign (Мониторинг животноводства) // Universidad Nacional de Rosario (UNR).
+#. Accounting for pastoralists in Argentina (Учет пастбищного животноводства в Аргентине) // League for Pastoral Peoples.
+#. Argentina's agro-export growth: A strong 2024 and promising 2025 outlook (Обзор агроэкспорта) // Miller Magazine.
+#. Argentina recorded record trade surplus in 2024 (Статья о рекордном профиците торгового баланса) // Buenos Aires Times.
+#. Argentina trims export duties for agricultural products (О снижении экспортных пошлин на агропродукцию) // Buenos Aires Times.
+#. Argentina's beef export revenue reaches record in 2025 (Рекордные доходы от экспорта говядины) // The Western Producer.
+#. Argentina Closed 2025 With 31.5% Inflation; and more news about Latin American agribusiness (Макроэкономические итоги 2025 года) // Agribrasilis.
+#. Argentine Dairy Industry in Figures: Key Data for 2024 (Молочная промышленность Аргентины в цифрах) // DairyNews.
+#. El mapa de la industria frigorífica 2025 (Карта мясоперерабатывающей индустрии, концентрация отрасли) // Bichos de Campo.
+#. How Milei's policies and global trends are reshaping Argentina's citrus export landscape (Экспорт цитрусовых и новые политики) // FreshFruitPortal / FreshPlaza.
+#. Argentina's Wine Exports Fall to $661 Million in 2025, Lowest Value Since 2009 (Кризис винного экспорта) // Vinetur.
+#. Argentina's wine industry withers on the vine as consumption hits a record low (Падение внутреннего потребления вина) // Barchart.
+#. Argentine 2025 Biodiesel Production among Lowest on Record (Снижение производства биодизеля) // Advanced BioFuels USA.
