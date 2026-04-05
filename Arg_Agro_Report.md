@@ -9,6 +9,7 @@ bibliography: refs.bib
 nocite: '@*'
 csl: gost.csl # Опционально: если скачаешь стиль ГОСТ
 reference-section-title: СПИСОК ИСПОЛЬЗОВАННОЙ ЛИТЕРАТУРЫ
+link-citations: true
 ---
 
 # ВВЕДЕНИЕ
