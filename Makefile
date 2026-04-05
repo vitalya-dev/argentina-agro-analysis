@@ -42,6 +42,7 @@ ppt: directories $(PPT)
 $(ODT): blank.md $(SRC).md
 	$(PANDOC) $^ -o $@ \
 	$(FILTERS) \
+	--citeproc \
 	--reference-doc=$(TEMPLATE_ODT) \
 	--toc \
 	--table-caption-position=below
