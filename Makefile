@@ -39,8 +39,8 @@ ppt: directories $(PPT)
 # Сборка ODT
 # =========================
 
-$(ODT): $(SRC).md
-	$(PANDOC) $< -o $@ \
+$(ODT): blank.md $(SRC).md
+	$(PANDOC) $^ -o $@ \
 	$(FILTERS) \
 	--reference-doc=$(TEMPLATE_ODT) \
 	--toc \
