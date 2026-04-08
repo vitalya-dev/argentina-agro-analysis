@@ -45,7 +45,7 @@ $(ODT): blank.md $(SRC).md
 	--citeproc \
 	--reference-doc=$(TEMPLATE_ODT) \
 	--toc \
-	--table-caption-position=below
+	--table-caption-position=above
 
 # =========================
 # Сборка презентации PPTX

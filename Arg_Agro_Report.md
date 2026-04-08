@@ -1,13 +1,14 @@
 ---
 lang: ru-RU
-tableCaptionLocation: bottom
-table-caption-position: below
+tableCaptionLocation: top       # Меняем bottom на top
+table-caption-position: top     # Меняем below на top
 figureTitle: Рисунок
 tableTitle: Таблица
+titleDelim: " – "               # ДОБАВЛЯЕМ ЭТО: ставит тире вместо двоеточия
 toc-title: Содержание
 bibliography: refs.bib
 nocite: '@*'
-csl: gost.csl # Опционально: если скачаешь стиль ГОСТ
+csl: gost.csl 
 reference-section-title: СПИСОК ИСПОЛЬЗОВАННОЙ ЛИТЕРАТУРЫ
 link-citations: true
 ---
