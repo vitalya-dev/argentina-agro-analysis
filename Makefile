@@ -20,7 +20,7 @@ TEMPLATE_PPT = $(TEMPLATE_DIR)/Template.pptx
 
 # Pandoc и фильтры
 PANDOC = pandoc
-FILTERS = --filter pandoc-crossref
+FILTERS = --lua-filter=add-style.lua --filter pandoc-crossref 
 
 # =========================
 # Основные цели
