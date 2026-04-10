@@ -8,7 +8,7 @@ PRESENT = Arg_Agro_Deck
 
 # Папки
 BUILD_DIR = build
-TEMPLATE_DIR = templates
+TEMPLATE_DIR = templates/pandoc
 
 # Выходные файлы
 ODT = $(BUILD_DIR)/$(SRC).odt
