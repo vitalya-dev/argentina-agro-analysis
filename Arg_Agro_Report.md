@@ -8,7 +8,7 @@ titleDelim: " – " # ДОБАВЛЯЕМ ЭТО: ставит тире вмес�
 toc-title: Содержание
 bibliography: refs.bib
 nocite: "@*"
-csl: gost.csl
+csl: gost-r-7-0-5-2008-numeric-alphabetical.csl
 reference-section-title: СПИСОК ИСПОЛЬЗОВАННОЙ ЛИТЕРАТУРЫ
 link-citations: true
 ---
