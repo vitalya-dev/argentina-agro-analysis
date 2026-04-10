@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="in-text" default-locale="ru-RU">
   <info>
-    <title>Russian GOST R 7.0.5-2008 (numeric, sorted alphabetically, URL fixed)</title>
-    <id>http://www.zotero.org/styles/gost-r-7-0-5-2008-numeric-alphabetical-fixed</id>
+    <title>Russian GOST R 7.0.5-2008 (numeric, sorted alphabetically, Russian)</title>
+    <title-short>GOST R 7.0.5-2008 (numeric, sorted alphabetically)</title-short>
+    <id>http://www.zotero.org/styles/gost-r-7-0-5-2008-numeric-alphabetical</id>
+    <link href="http://www.zotero.org/styles/gost-r-7-0-5-2008-numeric-alphabetical" rel="self"/>
     <link href="http://protect.gost.ru/document.aspx?control=7&amp;id=173511" rel="documentation"/>
+    <link href="http://standartgost.ru/g/%D0%93%D0%9E%D0%A1%D0%A2_%D0%A0_7.0.5-2008" rel="documentation"/>
     <author>
-      <name>Rybakov Dmitriy / Gemini Fixed</name>
+      <name>Rybakov Dmitriy</name>
     </author>
     <category citation-format="numeric"/>
     <category field="generic-base"/>
-    <summary>Russian GOST-2008 style with forced URL display for all types.</summary>
-    <updated>2024-04-10T00:00:00+00:00</updated>
+    <summary>Russian GOST-2008 style. Book, report, webpage, post-weblog and article chapters edited. Note!!! In articles form of № = Issue (Volume).</summary>
+    <updated>2020-05-27T03:21:04+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="ru">
@@ -35,14 +38,18 @@
     </names>
   </macro>
   <macro name="access">
-    <choose>
-      <if variable="URL">
-        <group>
-          <text value="[Электронный ресурс]. "/>
-          <text variable="URL" prefix="URL: "/>
-        </group>
-      </if>
-    </choose>
+    <group>
+      <text value="[Электронный ресурс]. "/>
+      <text variable="URL" prefix="URL: "/>
+      <group prefix=" (" suffix=").">
+        <text term="accessed" suffix=": "/>
+        <date variable="accessed">
+          <date-part name="day" suffix="." form="numeric-leading-zeros"/>
+          <date-part name="month" suffix="." form="numeric-leading-zeros"/>
+          <date-part name="year"/>
+        </date>
+      </group>
+    </group>
   </macro>
   <macro name="title">
     <text variable="title"/>
@@ -66,6 +73,7 @@
     </date>
   </macro>
   <macro name="language-sort">
+    <text variable="note"/>
     <text value="Z999"/>
   </macro>
   <macro name="citation-number">
@@ -126,6 +134,7 @@
         <else-if type="webpage post-weblog">
           <text macro="title"/>
           <text variable="container-title" prefix=" // "/>
+          <text prefix=" " macro="access"/>
         </else-if>
         <else-if type="article-journal article-magazine article-newspaper broadcast interview manuscript personal_communication speech thesis" match="any">
           <text macro="title"/>
@@ -160,7 +169,6 @@
           </group>
         </else>
       </choose>
-      <text macro="access" prefix=" "/>
     </layout>
   </bibliography>
 </style>
