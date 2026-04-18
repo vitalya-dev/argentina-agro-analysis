@@ -1,10 +1,12 @@
 ---
 lang: ru-RU
-tableCaptionLocation: top # Меняем bottom на top
-table-caption-position: top # Меняем below на top
+tableCaptionLocation: top 
+table-caption-position: top 
 figureTitle: Рисунок
 tableTitle: Таблица
-titleDelim: " – " # ДОБАВЛЯЕМ ЭТО: ставит тире вместо двоеточия
+figPrefix: Рисунок    # <-- ДОБАВИЛИ: префикс для ссылок на картинки
+tblPrefix: Таблица    # <-- ДОБАВИЛИ: префикс для ссылок на таблицы
+titleDelim: " – " 
 toc-title: Содержание
 bibliography: refs.bib
 nocite: "@*"
@@ -143,6 +145,7 @@ Table: Основные макроэкономические индикатор�
 | Инфляция, %         |  219,9 |   35,9 |   14,5 |    9,4 |    7,5 |
 | Госдолг, % ВВП      |   85,3 |   73,1 |   68,2 |   65,1 |   63,3 |
 | Сальдо счёта, % ВВП |    1,0 |   -0,4 |   -0,3 |    0,2 |    0,6 |
+
 
 Table: Параметры производства и экспорта основных культур (прогноз на сезон 2025/2026 гг.) [@usda2025_grain] {#tbl:crops}
 
