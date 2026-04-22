@@ -49,5 +49,26 @@ def set_gost_table_borders(*args):
 
     return None
 
+# Импортируем нужное свойство для режима обтекания
+from com.sun.star.text.WrapTextMode import NONE
 
-g_exportedScripts = (set_gost_table_borders,)
+def set_images_no_wrap(*args):
+    # Получаем контекст текущего открытого документа
+    doc = XSCRIPTCONTEXT.getDocument()
+    
+    # Получаем коллекцию всех изображений в документе
+    images = doc.getGraphicObjects()
+
+    # Проходимся по всем изображениям по их именам (как в твоем скрипте с таблицами)
+    for name in images.getElementNames():
+        # Получаем конкретную картинку по имени
+        image = images.getByName(name)
+        
+        # Меняем обтекание. 
+        # NONE означает "Без обтекания" (текст сверху и снизу).
+        image.Surround = NONE
+
+    return None
+
+
+g_exportedScripts = (set_images_no_wrap, set_gost_table_borders,)

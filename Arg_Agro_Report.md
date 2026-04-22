@@ -155,10 +155,10 @@ Table: Параметры производства и экспорта осно�
 | Ячмень                        |             1,3 |                 5,1 |                       3,3 |
 | Сорго                         |            0,78 |                 3,0 |                       1,5 |
 
-![Карта административного деления Аргентины [@oecd2025_stat]](img/Аргентина_-_провинции.svg.png){#fig:argentina}
+![Карта административного деления Аргентины [@oecd2025_stat]](img/Аргентина_-_провинции.svg.png){#fig:argentina width=80%}
 
-![Уровень влажности почвы в Аргентине (октябрь 2025 г.) [@oecd2025_eval]](img/soil_moisture_percentage_argentina_oct_2025.jpg){#fig:soil_moisture width=70%}
+![Уровень влажности почвы в Аргентине (октябрь 2025 г.) [@oecd2025_eval]](img/soil_moisture_percentage_argentina_oct_2025.jpg){#fig:soil_moisture width=80%}
 
-![Запасы влаги в почве при выращивании пшеницы в Аргентине (ноябрь 2025 г.) [@usda2025_grain]](img/soil_moisture_wheat_argentina_nov_2025.png){#fig:wheat_moisture width=50%}
+![Запасы влаги в почве при выращивании пшеницы в Аргентине (ноябрь 2025 г.) [@usda2025_grain]](img/soil_moisture_wheat_argentina_nov_2025.png){#fig:wheat_moisture width=80%}
 
-![Районы животноводства в Аргентине [@usda2024_livestock]](img/livestock_regions_argentina_map.jpg){#fig:livestock width=40%}
+![Районы животноводства в Аргентине [@usda2024_livestock]](img/livestock_regions_argentina_map.jpg){#fig:livestock width=80%}
