@@ -1,6 +1,41 @@
-import uno
 from com.sun.star.table import BorderLine
 from com.sun.star.text.WrapTextMode import NONE
+from com.sun.star.style.ParagraphAdjust import CENTER
+
+def center_special_headings(*args):
+    """Центрирует ВВЕДЕНИЕ, ЗАКЛЮЧЕНИЕ и другие структурные заголовки без изменения их уровня"""
+    doc = XSCRIPTCONTEXT.getDocument()
+    
+    # Список заголовков, которые нужно выровнять по центру (можешь добавить свои)
+    target_headings = [
+        "ВВЕДЕНИЕ", 
+        "ЗАКЛЮЧЕНИЕ", 
+        "СПИСОК ИСПОЛЬЗОВАННОЙ ЛИТЕРАТУРЫ",
+        "ПРИЛОЖЕНИЕ А"
+    ]
+    
+    text = doc.getText()
+    paragraphs = text.createEnumeration()
+    
+    while paragraphs.hasMoreElements():
+        para = paragraphs.nextElement()
+        
+        # Проверяем, что текущий элемент — это абзац (заголовки тоже являются абзацами)
+        if para.supportsService("com.sun.star.text.Paragraph"):
+            # Читаем текст и убираем случайные пробелы по краям
+            current_text = para.getString().strip()
+            
+            # Если текст абзаца совпадает с нужными нам
+            if current_text in target_headings:
+                # Просто выравниваем его по центру! 
+                # (Стиль остается Heading 1, поэтому оглавление не сломается)
+                para.ParaAdjust = CENTER
+                
+                # Если вдруг ты всё же хочешь применить именно свой стиль из шаблона,
+                # закомментируй строку выше и раскомментируй строку ниже:
+                # para.ParaStyleName = "HeadingCenter"
+                
+    return None
 
 def update_table_of_contents(*args):
     """Обновляет все оглавления и списки в документе"""
@@ -83,28 +118,26 @@ def set_images_no_wrap(*args):
 
 # --- ГЛАВНАЯ КНОПКА (ОБЩАЯ ФУНКЦИЯ) ---
 def format_all_elements(*args):
-    """Запускает форматирование полей, таблиц, картинок и обновляет оглавление разом"""
+    """Запускает форматирование полей, таблиц, картинок, заголовков и обновляет оглавление разом"""
     
-    # Шаг 1: Настраиваем поля документа
     set_page_margins()
-    
-    # Шаг 2: Применяем рамки ГОСТ к таблицам
     set_gost_table_borders()
-    
-    # Шаг 3: Убираем обтекание у картинок
     set_images_no_wrap()
     
-    # Шаг 4: Обновляем оглавление (обязательно в самом конце!)
+    # Шаг 3.5: Центрируем Введение и Заключение
+    center_special_headings()
+    
+    # Шаг 4: Обновляем оглавление
     update_table_of_contents()
     
     return None
 
-
 # Регистрируем все функции
 g_exportedScripts = (
-    format_all_elements, 
-    update_table_of_contents, 
-    set_page_margins, 
-    set_gost_table_borders, 
+    format_all_elements,  
+    update_table_of_contents,  
+    set_page_margins,  
+    set_gost_table_borders,  
     set_images_no_wrap,
+    center_special_headings, # <-- Не забудь добавить сюда!
 )
