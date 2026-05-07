@@ -61,5 +61,13 @@ $(PPT): $(PRESENT).md
 clean:
 	rm -rf $(BUILD_DIR)/*.odt $(BUILD_DIR)/*.pptx $(BUILD_DIR)/*.pdf
 
+# =========================
+# Установка макросов
+# =========================
+
+install-macro:
+	mkdir -p ~/.config/libreoffice/4/user/Scripts/python/
+	cp scripts/gost.py ~/.config/libreoffice/4/user/Scripts/python/
+
 # Пересборка
 rebuild: clean all
