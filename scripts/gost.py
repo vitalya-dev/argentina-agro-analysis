@@ -2,11 +2,11 @@ from com.sun.star.table import BorderLine
 from com.sun.star.text.WrapTextMode import NONE
 from com.sun.star.style.ParagraphAdjust import CENTER
 
-def center_special_headings(*args):
-    """Центрирует ВВЕДЕНИЕ, ЗАКЛЮЧЕНИЕ и другие структурные заголовки без изменения их уровня"""
+def style_special_headings(*args):
+    """Применяет стиль HeadingCenter к структурным заголовкам (ВВЕДЕНИЕ, ЗАКЛЮЧЕНИЕ и т.д.)"""
     doc = XSCRIPTCONTEXT.getDocument()
     
-    # Список заголовков, которые нужно выровнять по центру (можешь добавить свои)
+    # Список заголовков, на которые нужно накинуть наш стиль
     target_headings = [
         "ВВЕДЕНИЕ", 
         "ЗАКЛЮЧЕНИЕ", 
@@ -20,20 +20,15 @@ def center_special_headings(*args):
     while paragraphs.hasMoreElements():
         para = paragraphs.nextElement()
         
-        # Проверяем, что текущий элемент — это абзац (заголовки тоже являются абзацами)
+        # Проверяем, что текущий элемент — это абзац
         if para.supportsService("com.sun.star.text.Paragraph"):
             # Читаем текст и убираем случайные пробелы по краям
             current_text = para.getString().strip()
             
             # Если текст абзаца совпадает с нужными нам
             if current_text in target_headings:
-                # Просто выравниваем его по центру! 
-                # (Стиль остается Heading 1, поэтому оглавление не сломается)
-                para.ParaAdjust = CENTER
-                
-                # Если вдруг ты всё же хочешь применить именно свой стиль из шаблона,
-                # закомментируй строку выше и раскомментируй строку ниже:
-                # para.ParaStyleName = "HeadingCenter"
+                # Накидываем твой кастомный стиль!
+                para.ParaStyleName = "HeadingCenter"
                 
     return None
 
