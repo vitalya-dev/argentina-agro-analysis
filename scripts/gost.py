@@ -1,36 +1,40 @@
 from com.sun.star.table import BorderLine
 from com.sun.star.text.WrapTextMode import NONE
 from com.sun.star.style.ParagraphAdjust import CENTER
-
 def style_special_headings(*args):
-    """Применяет стиль HeadingCenter к структурным заголовкам (ВВЕДЕНИЕ, ЗАКЛЮЧЕНИЕ и т.д.)"""
+    """Применяет стили центрирования к заголовкам. 
+    HeadingCenter — для основных разделов (с разрывом страницы).
+    HeadingCenterNoBreak — для подразделов (без разрыва).
+    """
     doc = XSCRIPTCONTEXT.getDocument()
-    
-    # Список заголовков, на которые нужно накинуть наш стиль
-    target_headings = [
+
+    # Заголовки, которые должны быть по центру с разрывом страницы
+    main_headings = [
         "ВВЕДЕНИЕ", 
         "ЗАКЛЮЧЕНИЕ", 
         "СПИСОК ИСПОЛЬЗОВАННОЙ ЛИТЕРАТУРЫ",
-        "ПРИЛОЖЕНИЕ А",
+        "ПРИЛОЖЕНИЕ А"
+    ]
+
+    # Заголовки, которые должны быть по центру БЕЗ разрыва страницы
+    sub_headings = [
         "Графический материал и карты"
     ]
-    
+
     text = doc.getText()
     paragraphs = text.createEnumeration()
-    
+
     while paragraphs.hasMoreElements():
         para = paragraphs.nextElement()
-        
-        # Проверяем, что текущий элемент — это абзац
+
         if para.supportsService("com.sun.star.text.Paragraph"):
-            # Читаем текст и убираем случайные пробелы по краям
             current_text = para.getString().strip()
-            
-            # Если текст абзаца совпадает с нужными нам
-            if current_text in target_headings:
-                # Накидываем твой кастомный стиль!
+
+            if current_text in main_headings:
                 para.ParaStyleName = "HeadingCenter"
-                
+            elif current_text in sub_headings:
+                para.ParaStyleName = "HeadingCenterNoBreak"
+
     return None
 
 def update_table_of_contents(*args):
