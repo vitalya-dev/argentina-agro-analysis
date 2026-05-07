@@ -120,7 +120,7 @@ def format_all_elements(*args):
     set_images_no_wrap()
     
     # Шаг 3.5: Центрируем Введение и Заключение
-    center_special_headings()
+    style_special_headings()
     
     # Шаг 4: Обновляем оглавление
     update_table_of_contents()
@@ -134,5 +134,5 @@ g_exportedScripts = (
     set_page_margins,  
     set_gost_table_borders,  
     set_images_no_wrap,
-    center_special_headings, # <-- Не забудь добавить сюда!
+    style_special_headings,
 )

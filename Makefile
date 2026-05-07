@@ -26,7 +26,7 @@ FILTERS = --lua-filter=scripts/add-style.lua --filter pandoc-crossref
 # Основные цели
 # =========================
 
-all: directories odt ppt
+all: directories odt ppt install-macro
 
 # Создание папки build, если ее нет
 directories:
